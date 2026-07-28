@@ -7,6 +7,7 @@ Personal AI agent skills — portable instruction packages for Kiro, Claude Code
 | Skill | Description |
 |-------|-------------|
 | [terraform-skill](./skills/terraform-skill/) | Terraform/OpenTofu best practices — modules, testing, CI/CD, state management, and failure mode diagnosis |
+| [pdf](./skills/pdf/) | PDF processing — read, create, merge, split, watermark, encrypt, OCR, extract images, fill forms (Python + Node.js) |
 
 ## Installation
 
