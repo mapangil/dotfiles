@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# post-merge hook — runs after `git pull`/`git merge`.
+# Re-links any new skills into the global Kiro skills directory automatically.
+#
+# Enabled via: git config --local core.hooksPath .githooks (done by install.sh)
+#
+set -euo pipefail
+
+REPO_DIR="$(git rev-parse --show-toplevel)"
+
+if [ -x "$REPO_DIR/install.sh" ]; then
+  echo "[post-merge] syncing Kiro skills..."
+  "$REPO_DIR/install.sh"
+fi
