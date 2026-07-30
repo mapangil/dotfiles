@@ -10,6 +10,7 @@ Personal AI agent skills — portable instruction packages for Kiro, Claude Code
 | [pdf](./skills/pdf/) | PDF processing — read, create, merge, split, watermark, encrypt, OCR, extract images, fill forms (Python + Node.js) |
 | [amazon-connect-awscc](./skills/amazon-connect-awscc/) | Amazon Connect contact center infrastructure with the Terraform AWSCC provider — instances, queues, routing profiles, contact flows, and integrations |
 | [ci-cd-pipelines](./skills/ci-cd-pipelines/) | General-purpose CI/CD pipelines — stage architecture, GitHub Actions, caching, deployment strategies, OIDC, and supply-chain security |
+| [aws-observability](./skills/aws-observability/) | AWS observability with CloudWatch (Log Insights, Metrics, Alarms, Dashboards, EMF), X-Ray, CloudTrail, ADOT, synthetics, and Application Signals onboarding. Vendored from [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) (Apache 2.0) |
 
 ## Installation
 
