@@ -1,0 +1,16 @@
+This skill is vendored from the Agent Toolkit for AWS.
+
+Source: https://github.com/aws/agent-toolkit-for-aws
+Path:   plugins/aws-core/skills/aws-observability
+
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use these files except in compliance with the License. A copy of the License
+is included in this directory as LICENSE. You may also obtain a copy at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+The files in this directory are redistributed unmodified from the upstream
+project. If any file is changed, this NOTICE will be updated to state which
+files were modified, as required by section 4(b) of the License.
