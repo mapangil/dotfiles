@@ -8,10 +8,46 @@ Personal AI agent skills — portable instruction packages for Kiro, Claude Code
 |-------|-------------|
 | [terraform-skill](./skills/terraform-skill/) | Terraform/OpenTofu best practices — modules, testing, CI/CD, state management, and failure mode diagnosis |
 | [pdf](./skills/pdf/) | PDF processing — read, create, merge, split, watermark, encrypt, OCR, extract images, fill forms (Python + Node.js) |
+| [amazon-connect-awscc](./skills/amazon-connect-awscc/) | Amazon Connect contact center infrastructure with the Terraform AWSCC provider — instances, queues, routing profiles, contact flows, and integrations |
+| [ci-cd-pipelines](./skills/ci-cd-pipelines/) | General-purpose CI/CD pipelines — stage architecture, GitHub Actions, caching, deployment strategies, OIDC, and supply-chain security |
 
 ## Installation
 
-### Option 1: Using the `skills` CLI (recommended)
+### Option 0: Automated global install (recommended for this repo)
+
+Clone once, then run `install.sh`. It symlinks **every** skill in this repo into
+`~/.kiro/skills/` and installs a git hook so new skills link themselves after each
+`git pull` — no per-skill commands ever again.
+
+```bash
+# Clone into your Kiro config directory
+git clone https://github.com/mapangil/dotfiles.git ~/.kiro/dotfiles
+
+# Link all skills + enable auto-linking on pull
+~/.kiro/dotfiles/install.sh
+```
+
+From then on, updating is a single command (the post-merge hook re-links automatically):
+
+```bash
+git -C ~/.kiro/dotfiles pull
+```
+
+The script is idempotent and safe: it skips correct links, repoints stale ones,
+prunes dangling links, and refuses to clobber real (non-symlink) directories.
+Restart Kiro or start a new session for changes to take effect.
+
+To undo everything (removes only this repo's symlinks and the hook):
+
+```bash
+~/.kiro/dotfiles/uninstall.sh
+```
+
+> **Tip:** For a truly zero-script setup, you can instead symlink the whole directory
+> once with `ln -s ~/.kiro/dotfiles/skills ~/.kiro/skills` (only works if `~/.kiro/skills`
+> does not already exist). `install.sh` detects this mode and does nothing in it.
+
+### Option 1: Using the `skills` CLI
 
 Install a specific skill into your project:
 
